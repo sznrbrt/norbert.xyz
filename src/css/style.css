@@ -131,7 +131,6 @@ body {
 
 .skill-panel-body {
   color:black;
-  min-height: 240px;
 }
 
 .panel-body {
@@ -180,4 +179,100 @@ body {
 
 .alignedGulp {
   margin-left: 20px;
+}
+
+.projectImg {
+  /*max-width: 80px;*/
+}
+
+.projectDesc {
+  margin-top: 2px;
+  color:white;
+}
+
+.projectTech {
+  background-color:#212121;
+  color:#38C577;
+  margin-right: 1px;
+  font-size: 1.05em;
+  margin-top: 2px;
+}
+
+.openProjectDetails {
+  background-color: #38C577;
+  border:none;
+  color:black;
+  vertical-align: middle;
+  line-height: 20px;
+}
+
+.openProjectDetails:hover {
+  background-color:#38C577;
+  -moz-box-shadow:    inset 0 0 3px #000000;
+  -webkit-box-shadow: inset 0 0 3px #000000;
+  box-shadow:         inset 0 0 3px #000000;
+  color:#E6E6E6;
+}
+
+.tooltip {
+    border: 1px solid black;
+    width: 230px;
+    margin-left: 58px;
+    margin-top: -35px;
+    background-color: darkcyan;
+    border-radius: 4px;
+    height: 20px;
+    color: white;
+}
+
+.fa-arrow-circle-o-right{
+  vertical-align: middle;
+  line-height: 20px;
+  margin-left: 5px;
+  font-size: 130%;
+}
+
+.project-panel {
+}
+
+.projectSub {
+  font-size: 8.0em;
+}
+
+.secondProjectFooter {
+  background-color: transparent;
+  border:none;
+  vertical-align: bottom;
+  max-height: 100px;
+}
+
+#thirdPanel {
+  vertical-align: middle;
+  height: auto;
+}
+
+#goToH1:hover {
+  font-size: 3em;
+}
+
+#goToAllLink:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fa-angle-double-right {
+  margin-left: 5px;
+}
+
+.fa-mobile, .fa-laptop, .fa-angle-double-right {
+  color:#38C577;
+}
+
+.newProject {
+  background-color: #38C577 !important;
+  margin-left: 10px;
+}
+
+.fa-plus {
+  margin-left: 5px;
 }
