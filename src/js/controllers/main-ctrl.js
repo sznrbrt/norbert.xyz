@@ -2,7 +2,7 @@
 
 var app = angular.module('portfolioApp');
 
-app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll, $location, $timeout) {
+app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll, $location, $timeout, $window) {
     console.log('mainCtrl');
     $scope.hoverStyle = {};
     $scope.DOMContentLoaded = false;
@@ -42,11 +42,11 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
     };
 
     $scope.gotoAnchor = function(x) {
-      var newHash = 'anchor' + x;
-      if ($location.hash() !== newHash) {
+    //   var newHash = 'anchor' + x;
+      if ($location.hash() !== x) {
         // set the $location.hash to `newHash` and
         // $anchorScroll will automatically scroll to it
-        $location.hash('anchor' + x);
+        $location.hash(x);
       } else {
         // call $anchorScroll() explicitly,
         // since $location.hash hasn't changed
@@ -67,13 +67,25 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
         setProjectPanelHeight();
     });
 
+    $scope.email = "moc.kooltuo@trebron.scuzs".split('').reverse('').join('');
+
+    $scope.sendEmail = function() {
+        function sendMail(emailId,subject,message) {
+            $window.open("mailto:"+ emailId + "?subject=" + subject+"&body="+message,"_self");
+        }
+
+        sendMail($scope.email,"","");
+    }
+
+
     function setProjectPanelHeight() {
         var heighT = document.getElementById("firstPanel").offsetHeight;
         var width = $scope.getWidth();
         if(width > 992){
-            document.getElementById('thirdPanel').style.height = heighT - 285 + 'px';
-            document.getElementById('goToH1').style['line-height'] = heighT - 360 + 'px';
-            console.log(document.getElementById('goToH1').style['line-height']);
+            document.getElementById('secondPanel').style.height = heighT + 'px';
+            document.getElementById('thirdPanel').style.height = heighT + 'px';
+            document.getElementById('fourthPanel').style.height = heighT + 'px';
+            // document.getElementById('goToH1').style['line-height'] = heighT - 360 + 'px';
         } else {
             document.getElementById('thirdPanel').style.height = 'auto';
         }

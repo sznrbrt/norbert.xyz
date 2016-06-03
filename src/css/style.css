@@ -1,3 +1,8 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
 #menuText {
   font-size: 20px;
 }
@@ -121,12 +126,11 @@ body {
 }
 
 .titleText {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .descItemText {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .skill-panel-body {
@@ -158,13 +162,13 @@ body {
 }
 
 .panel-default {
-  /*border-color: #212121;*/
+  /*border-color: #;*/
   border:none;
 }
 
 .panel-default>.panel-heading {
-  border-color: #212121;
-  background-color: #212121;
+  border-color: #333645;
+  background-color: #333645;
   color:white;
 }
 
@@ -214,17 +218,6 @@ body {
   color:#E6E6E6;
 }
 
-.tooltip {
-    border: 1px solid black;
-    width: 230px;
-    margin-left: 58px;
-    margin-top: -35px;
-    background-color: darkcyan;
-    border-radius: 4px;
-    height: 20px;
-    color: white;
-}
-
 .fa-arrow-circle-o-right{
   vertical-align: middle;
   line-height: 20px;
@@ -271,8 +264,89 @@ body {
 .newProject {
   background-color: #38C577 !important;
   margin-left: 10px;
+  font-size: 0.5em;
 }
 
 .fa-plus {
   margin-left: 5px;
+}
+
+
+
+video#bgvid {
+    position: absolute;
+    width: auto;
+    height:300px;
+    /*-ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);*/
+}
+
+.skillsPanel {
+  min-height: 280px;
+}
+
+.green {
+  background-color: #38C577 !important;
+}
+
+.openCV {
+  color:white;
+  min-height: 60px;
+  border-radius: 0 2px 2px 0;
+}
+.openCV:hover {
+  color:black;
+}
+
+.contactPanel {
+  margin-top: 5px;
+  background-color: #333645;
+  min-height: 50px;
+  border: 1px solid #404352;
+  /*-moz-box-shadow:    -2px -3px -5px -6px #000;*/
+  /*-webkit-box-shadow: -2px -3px -5px -6px #000;*/
+  /*box-shadow: 0px 1px 1px 0px #000;*/
+}
+
+.noMar {
+  margin: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.noPad {
+  padding: 0 !important;
+}
+
+.contactBtn {
+  background-color: #333645;
+  border:none;
+  color: white;
+  margin: 0;
+}
+.contactBtn:hover {
+  color: #38C577;
+  border:none;
+}
+
+.contactIcon {
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+
+.fa-envelope {
+  font-size: 80%;
+}
+
+.email {
+  font-size: 95%;
+}
+
+.footerBtn {
+  color: #38C577 !important;
+}
+
+.footerBtn:hover {
+  color: white !important;
 }

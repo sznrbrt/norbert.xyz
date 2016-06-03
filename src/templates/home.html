@@ -1,22 +1,82 @@
-<div id="anchor1"></div>
+<div id="aboutme"></div>
+        <div class="row">
+            <div class="col-xs-12 col-md-12 text-left" style="margin-left:-20px">
+                <div class="panel panel-default panel-transparent">
+                    <div class="panel-body" style="margin-top:20px; margin-bottom:0">
+                        <h1 style="margin:0">Norbert Szucs</h1>
+                        <h3 class="titleText"><span class="greenText">Full-stack JavaScript developer.</span></h3>
 
-<div class="row">
-    <div class="col-xs-12" style="margin-left:-30px">
-        <h1>Hello, my name is Norbert Szucs</h1>
-        <h3 class="titleText">I'm a <span class="green label label-success">Full-stack JavaScript developer.</span></h3>
+                        <div class="panel panel-default contactPanel noPad" style="padding:0; min-height:0">
+                            <div class="panel-body" style="padding:0;">
+                                <div class="row noPad noMar text-center">
+                                    <div class="col-xs-12 col-md-8 noPad noMar">
+                                      <div class="row noMar">
+                                        <div class="col-xs-12 col-md-12 noMar" style="padding: 5px 0;">
+                                          <i class="fa fa-envelope contactIcon" aria-hidden="true"></i><span class="email">{{ reversedEmail | reverse }}</span>
+                                        </div>
+                                        <div class="col-xs-12 col-md-offset-1 col-md-3 noMar noPad">
+                                          <button class="btn btn-sm contactBtn">
+                                            <i class="fa fa-github contactIcon" aria-hidden="true"></i> Github
+                                          </button>
+                                        </div>
+                                        <div class="col-xs-12 col-md-3 noMar noPad">
+                                          <button class="btn btn-sm contactBtn">
+                                            <i class="fa fa-stack-overflow contactIcon" aria-hidden="true"></i> Stackoverflow
+                                          </button>
+                                        </div>
+                                        <div class="col-xs-12 col-md-3 noMar noPad">
+                                          <button class="btn btn-sm contactBtn">
+                                            <i class="fa fa-linkedin contactIcon" aria-hidden="true"></i> LinkedIn
+                                          </button>
+                                        </div>
+                                        <div class="col-xs-12 col-md-3 noMar noPad">
+                                          <button class="btn btn-sm contactBtn">
+                                            <i class="fa fa-twitter contactIcon" aria-hidden="true"></i> Twitter
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4 noMar noPad text-right hidden-xs hidden-sm">
+                                      <button class="btn btn-md openProjectDetails openCV">
+                                          <div class="row noMar noPad">
+                                              <i class="fa fa-arrow-circle-o-down  faa-vertical animated" aria-hidden="true" style="font-size:160%"></i>
+                                          </div>
+                                          <div class="row noMar noPad">
+                                              Download Norbert's CV
+                                          </div>
+                                      </button>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4 noMar noPad text-center hidden-md hidden-lg">
+                                      <button class="btn btn-sm" style="margin-bottom:10px; background-color:#38C577;">
+                                          <div class="row noMar noPad">
+                                              Download Norbert's CV
+                                          </div>
+                                      </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-        <h4 class="descItemText">I'm from Budapest(HU), currently <span class="greenText">located in the Bay Area.</span></h4>
-        <h4 class="descItemText">I have a BA in Finance & Accounting with a <span class="greenText">background in business analytics.</span></h4>
-        <h4 class="descItemText">I'm a big fan of financial technology and interested in big data.</h4>
-        <h4 class="descItemText">I'm learning <span style="color:#00D8FF">React</span> currently.</h4>
-        <div id="anchor2" style="position:relative; top: 2px;"></div>
-        <hr>
-    </div>
+                        <!-- <div class="col-xs-12 col-md-2 noMar noPad">
+                          <button class="btn btn-sm contactBtn">
+                            <img src="./img/quoralogo.png" alt="" class="img-responsive" style="max-width:22px">
+                          </button>
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- <div class="row" style="position:relative; left:-10px; width: 97.5%; margin-top:0">
+    <hr>
+</div> -->
+<div id="skills">
+
 </div>
 <!-- SKILLS -->
 <!-- Header Bar -->
 <div class="row header">
-    <div class="col-xs-12">
+    <div class="col-xs-12" style="margin-top:30px; margin-left:10px">
         <div class="meta">
             <div class="menuLabel">
                 Skills
@@ -62,9 +122,9 @@
     </div>
 
 
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-12 col-md-3">
 
-        <div class="panel panel-default panel-transparent">
+        <div class="panel panel-default panel-transparent skillsPanel">
             <div class="panel-heading">
                 <h3 class="panel-title">Front-end</h3>
             </div>
@@ -104,9 +164,9 @@
             </div>
         </div>
     </div>
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-12 col-md-3">
 
-        <div class="panel panel-default panel-transparent">
+        <div class="panel panel-default panel-transparent skillsPanel">
             <div class="panel-heading">
                 <h3 class="panel-title">Back-end</h3>
             </div>
@@ -146,45 +206,78 @@
             </div>
         </div>
     </div>
-    <div class="col-xs-12">
-        <div class="panel panel-default panel-transparent">
 
+    <div class="col-xs-12 col-md-3">
+
+        <div class="panel panel-default panel-transparent skillsPanel">
             <div class="panel-heading">
                 <h3 class="panel-title">Data</h3>
             </div>
-            <div class="panel-body" style="color:black">
+            <div class="panel-body skill-panel-body">
                 <div class="row">
-                    <div class="col-xs-12 col-md-4">
-                        <div class="col-xs-6 col-md-3 text-right">
-                            <img src="img/mysqllogo.png" alt="" class="img-responsive logoImage lImgVer">
-                        </div>
-                        <div class="col-xs-6 col-md-2 text-right">
-                            <p class="techName">mySQL</p>
-                        </div>
+                    <div class="col-xs-6">
+                        <img src="img/mysqllogo.png" alt="" class="img-responsive logoImage">
                     </div>
-                    <div class="col-xs-12 col-md-4">
-                        <div class="col-xs-4 col-lg-2 col-md-offset-2 col-md-4 text-left">
-                            <img src="img/sqlitelogo.png" alt="" class="logoImage lImgVer">
-                        </div>
-                        <div class="col-xs-8 col-lg-2 col-md-2 text-right">
-                            <p class="techName">sqLite</p>
-                        </div>
+                    <div class="col-xs-6">
+                        <p class="techName">mySQL</p>
                     </div>
-                    <div class="col-xs-12 col-md-4">
-                        <div class="col-xs-6 text-right">
-                            <img src="img/mongologo.png" alt="" class="img-responsive logoImage lImgVer" style="top:3px; max-height:30px">
-                        </div>
-                        <div class="col-xs-6 col-md-2 text-right">
-                            <p class="techName">mongoDB</p>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <img src="img/sqlitelogo.png" alt="" class="img-responsive logoImage">
                     </div>
-
+                    <div class="col-xs-6">
+                        <p class="techName">sqLite</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <img src="img/mongologo.png" alt="" class="img-responsive logoImage">
+                    </div>
+                    <div class="col-xs-6">
+                        <p class="techName">MongoDB</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-md-3">
+
+        <div class="panel panel-default panel-transparent skillsPanel">
+            <div class="panel-heading">
+                <h3 class="panel-title">Other</h3>
+            </div>
+            <div class="panel-body skill-panel-body">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <img src="img/gulplogo.png" alt="" class="img-responsive logoImage">
+                    </div>
+                    <div class="col-xs-6">
+                        <p class="techName">Gulp</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <img src="img/mochachailogo.png" alt="" class="img-responsive logoImage">
+                    </div>
+                    <div class="col-xs-6">
+                        <p class="techName">Mocha&Chai</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <img src="img/karmalogo.png" alt="" class="img-responsive logoImage">
+                    </div>
+                    <div class="col-xs-6">
+                        <p class="techName">Karma</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="col-xs-12">
         <div class="panel panel-default panel-transparent">
             <div class="panel-heading">
                 <h3 class="panel-title">Other</h3>
@@ -221,98 +314,179 @@
             </div>
         </div>
     </div>
-</div>
-<!-- End Header Bar -->
-<!--  END OF SKILLS-->
+</div> -->
+    <!-- End Header Bar -->
+    <!--  END OF SKILLS-->
 
-<div class="row">
-    <div class="col-xs-12" style="margin-left:-30px;">
-        <hr>
-    </div>
-</div>
-
-<div class="row header">
-    <div class="col-xs-12">
-        <div class="meta">
-            <div class="menuLabel">
-                Projects
-            </div>
+    <div class="row">
+        <div class="col-xs-12" style="margin-left:-10px;">
+            <hr>
         </div>
     </div>
-</div>
 
-<div class="row text-center" style="position: relative; left: -20px">
-    <div class="col-xs-12 col-md-4">
-        <div class="panel panel-default panel-transparent project-panel" id="firstPanel">
-            <div class="panel-heading">
-                        <div class="row">
-                            <h3 class="panel-title">MBF Konferecia <span class="badge newProject">New<i class="fa fa-plus faa-flash animated" aria-hidden="true"></i></span></h3>
-                        </div>
-            </div>
-            <div class="panel-body skill-panel-body">
-                <div class="row">
-                    <div class="col-xs-6 text-center">
-                        <img src="./img/projectimgs/mbfkonferencia.jpeg" alt="" class="img-responsive projectImg">
-                    </div>
-                    <div class="col-xs-6 text-center">
-                        <img src="./img/projectimgs/mbfkonferencia2.jpeg" alt="" class="img-responsive projectImg">
-                    </div>
-                </div>
-                <div class="row text-center projectDesc">
-                    Hybrid Mobile App built with Ionic.
-                </div>
-                <div class="row" style="margin-top:10px">
-                    <div class="col-xs-12 text-center">
-                        <span class="badge projectTech">Ionic</span>
-                        <span class="badge projectTech">AngularJS</span>
-                        <span class="badge projectTech">Sass</span>
-                        <span class="badge projectTech">PHP</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <button class="btn btn-success openProjectDetails" style="width:100%">Open Project Details <i class="fa fa-arrow-circle-o-right faa-horizontal animated" aria-hidden="true"></i></button>
-                    </div>
+    <div id="projects"></div>
+    <div class="row header text-left">
+        <div class="col-xs-12">
+            <div class="meta">
+                <div class="menuLabel" style="margin-left:-10px">
+                    Projects
+                    <i class="fa fa-laptop" aria-hidden="true"></i>
+                    <i class="fa fa-mobile" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-xs-12 col-md-8" style="opacity:0.6">
-        <div class="panel panel-default panel-transparent project-panel" id="secondPanel">
-            <div class="panel-heading">
-                <h3 class="panel-title">Soon...</h3>
+
+    <div class="row text-center" style="position: relative; left: -10px">
+        <div class="col-xs-12 col-md-3">
+            <div class="panel panel-default panel-transparent project-panel" id="firstPanel">
+                <div class="panel-heading">
+                    <div class="row">
+                        <h3 class="panel-title">MBF Konferecia <span class="label newProject">New<i class="fa fa-plus faa-flash animated" aria-hidden="true"></i></span></h3>
+                    </div>
+                </div>
+                <div class="panel-body skill-panel-body">
+                    <div class="row">
+                        <div class="col-xs-6 text-center">
+                            <img src="./img/projectimgs/mbfkonferencia.jpeg" alt="" class="img-responsive projectImg img-rounded">
+                        </div>
+                        <div class="col-xs-6 text-center">
+                            <img src="./img/projectimgs/mbfkonferencia2.jpeg" alt="" class="img-responsive projectImg img-rounded">
+                        </div>
+                    </div>
+                    <div class="row text-center projectDesc">
+                        Hybrid Mobile App built with Ionic.
+                    </div>
+                    <div class="row" style="margin-top:10px">
+                        <div class="col-xs-12 text-center">
+                            <span class="label projectTech">Ionic</span>
+                            <span class="label projectTech">AngularJS</span>
+                            <span class="label projectTech">Sass</span>
+                            <span class="label projectTech">PHP</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-success openProjectDetails" style="width:100%">Open Project Details <i class="fa fa-arrow-circle-o-right faa-horizontal animated" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="panel-body skill-panel-body">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="row text-center">
-                            <i class="fa fa-github projectSub" aria-hidden="true"></i>
+        </div>
+        <div class="col-xs-12 col-md-3" style="opacity:0.7">
+            <div class="panel panel-default panel-transparent project-panel" id="secondPanel">
+                <div class="panel-heading">
+                    <div class="row">
+                        <h3 class="panel-title">Soon...</h3>
+                    </div>
+                </div>
+                <div class="panel-body skill-panel-body">
+                    <div class="row">
+                        <i class="fa fa-github projectSub" aria-hidden="true" style="color:white"></i>
+                    </div>
+                    <div class="row text-center projectDesc">
+                        Soon more projects will be uploaded... In the meantime, check my github.
+                    </div>
+                    <div class="row" style="margin-top:10px">
+                        <div class="col-xs-12 text-center">
                         </div>
-                        <div class="row text-center">
-                            Soon more projects will be uploaded... In the meantime, check my github.
-                        </div>
-                        <div class="row" style="margin-top:20px">
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
                             <button class="btn btn-sm githubBtn" ng-click="gotogithub()">Go to github</button>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-    </div>
-    <div class="col-xs-12 col-md-8">
-        <div class="panel panel-default panel-transparent project-panel" id="thirdPanel">
-            <div class="panel-body skill-panel-body">
-                <div class="row" id="goToTxt" style="vertical-align:middle">
-                    <a id="goToAllLink"><h1 style="color:white" id="goToH1">
+        <div class="col-xs-12 col-md-3" style="opacity:0.7">
+            <div class="panel panel-default panel-transparent project-panel" id="thirdPanel">
+                <div class="panel-heading">
+                    <div class="row">
+                        <h3 class="panel-title">Soon...</h3>
+                    </div>
+                </div>
+                <div class="panel-body skill-panel-body">
+                    <div class="row">
+                        <i class="fa fa-github projectSub" aria-hidden="true" style="color:white"></i>
+                    </div>
+                    <div class="row text-center projectDesc">
+                        Soon more projects will be uploaded... In the meantime, check my github.
+                    </div>
+                    <div class="row" style="margin-top:10px">
+                        <div class="col-xs-12 text-center">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-sm githubBtn" ng-click="gotogithub()">Go to github</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-3" style="opacity:0.7">
+            <div class="panel panel-default panel-transparent project-panel" id="fourthPanel">
+                <div class="panel-heading">
+                    <div class="row">
+                        <h3 class="panel-title">Soon...</h3>
+                    </div>
+                </div>
+                <div class="panel-body skill-panel-body">
+                    <div class="row">
+                        <i class="fa fa-github projectSub" aria-hidden="true" style="color:white"></i>
+                    </div>
+                    <div class="row text-center projectDesc">
+                        Soon more projects will be uploaded... In the meantime, check my github.
+                    </div>
+                    <div class="row" style="margin-top:10px">
+                        <div class="col-xs-12 text-center">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-sm githubBtn" ng-click="gotogithub()">Go to github</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-xs-12 col-md-8" style="opacity:0.6">
+            <div class="panel panel-default panel-transparent project-panel" id="secondPanel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Soon...</h3>
+                </div>
+                <div class="panel-body skill-panel-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="row text-center">
+                                <i class="fa fa-github projectSub" aria-hidden="true"></i>
+                            </div>
+                            <div class="row text-center">
+                                Soon more projects will be uploaded... In the meantime, check my github.
+                            </div>
+                            <div class="row" style="margin-top:20px">
+                                <button class="btn btn-sm githubBtn" ng-click="gotogithub()">Go to github</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-8">
+            <div class="panel panel-default panel-transparent project-panel" id="thirdPanel">
+                <div class="panel-body skill-panel-body">
+                    <div class="row" id="goToTxt" style="vertical-align:middle">
+                        <a id="goToAllLink"><h1 style="color:white" id="goToH1">
                         Go to all projects
                         <i class="fa fa-laptop" aria-hidden="true"></i>
                         <i class="fa fa-mobile" aria-hidden="true"></i>
                         <i class="fa fa-angle-double-right faa-passing animated" aria-hidden="true"></i></h1>
                     </a>
+                    </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
+        </div> -->
     </div>
-</div>

@@ -8,4 +8,6 @@ app.controller('homeCtrl', function($scope, $state, $window) {
   $scope.gotogithub = function () {
     $window.location.href = 'https://github.com/sznrbrt';
   }
+
+  $scope.reversedEmail = "moc.kooltuo@trebron.scuzs";
 });
