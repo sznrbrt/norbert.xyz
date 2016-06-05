@@ -386,3 +386,75 @@ video#bgvid {
   background-color: #38C577;
   color:white;
 }
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+  #sidebar-wrapper {
+    margin-left: -170px;
+  }
+  .menu-icon {
+    position: relative;
+    left: -10px;
+  }
+  .sidebar-list {
+    position: relative;
+    left: 20px;
+  }
+  .sidebar-main {
+    position: relative;
+    left: 20px;
+  }
+  .sidebar-footer {
+    margin-left: 20px;
+  }
+  .page-content {
+    margin-left: 0;
+  }
+  .mobileFullWidth {
+    width: 107%;
+    margin-bottom: 0 !important;
+  }
+  .titleText {
+    font-size: 14px;
+  }
+  .menuLabel {
+    font-size: 22px;
+  }
+  .mobileMinHeightZero {
+    min-height: 0;
+  }
+  .mobilePositionHr {
+    margin-left: 0 !important;
+    width: 107%;
+  }
+  .pullRightFrame {
+    position: relative;
+    right: -20px;
+  }
+  .openProjectDetails {
+    font-size: 12px;
+  }
+  .projectName{
+    font-size: 90% !important;
+  }
+  .projectFullDesc{
+    font-size: 90% !important;
+  }
+  .noMarPadMob {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .projectTech {
+    font-size: 10px;
+  }
+  .imageCenterMob {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .socialIcon {
+    max-height: 200px !important;
+  }
+}

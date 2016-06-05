@@ -21,17 +21,29 @@
         <div class="panel panel-default panel-transparent project-panel">
             <div class="panel-body skill-panel-body">
                 <div class="row">
-                    <div class="col-xs-12 col-md-6">
-                        <div class="row text-left">
-                            <span style="font-size:120%; line-height:30px; vertical-align:middle;">MBF Konferecia - {{ project.shortDesc }}</span>
+                    <div class="col-xs-12 col-md-6 noMarPadMob">
+                        <div class="row text-left noMarPadMob">
+                            <span class="projectName" style="font-size:120%; line-height:30px; vertical-align:middle;">MBF Konferecia</span>
                             <i class="fa fa-mobile" aria-hidden="true" style="font-size:200%; line-height:30px; vertical-align:middle; margin-left:10px"></i>
                         </div>
-                        <div class="row text-left">
+                        <!-- <div class="row text-center hidden-md hidden-lg" style="margin-top:10px;">
+                            <span class="projectFullDesc">{{ project.shortDesc}}</span>
+                        </div> -->
+                        <div class="row text-left hidden-xs">
                             <p class="projectFullDesc" style="margin-top:30px;"><span class="greenText">Description:</span> {{ project.longDesc }}</p>
                         </div>
+                        <div class="row text-center hidden-md hidden-lg">
+                            <p class="projectFullDesc" style="margin-top:30px;"> {{ project.longDesc }}</p>
+                        </div>
                         <div class="row" style="margin-top:10px">
-                            <div class="col-xs-12 text-left">
+                            <div class="col-xs-12 text-left hidden-xs">
                                 <span style="margin-right:10px; margin-left:-15px; color:#38C577" class="projectFullDesc">Tags:</span>
+                                <span class="label projectTech">Ionic</span>
+                                <span class="label projectTech">AngularJS</span>
+                                <span class="label projectTech">Sass</span>
+                                <span class="label projectTech">PHP</span>
+                            </div>
+                            <div class="visible-xs-12 noMarPad text-center hidden-md hidden-lg">
                                 <span class="label projectTech">Ionic</span>
                                 <span class="label projectTech">AngularJS</span>
                                 <span class="label projectTech">Sass</span>

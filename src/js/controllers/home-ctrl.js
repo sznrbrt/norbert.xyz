@@ -14,6 +14,7 @@ app.controller('homeCtrl', function($scope, $state, $window, $stateParams, $loca
   }
 
   if($stateParams.target){
+    console.log($location);
     $location.hash($stateParams.target);
     setProjectPanelHeight();
   }
