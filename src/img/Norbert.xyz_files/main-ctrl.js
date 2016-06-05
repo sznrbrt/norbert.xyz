@@ -15,11 +15,6 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
         return window.innerWidth;
     };
 
-    angular.element(document).ready(function() {
-        $scope.DOMContentLoaded = true;
-        setProjectPanelHeight();
-    });
-
     $scope.$watch($scope.getWidth, function(newValue, oldValue) {
         if (newValue >= mobileView) {
             if (angular.isDefined($cookieStore.get('toggle'))) {
@@ -30,9 +25,7 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
         } else {
             $scope.toggle = false;
         }
-        if ($scope.DOMContentLoaded) {
-            setProjectPanelHeight();
-        }
+        if($scope.DOMContentLoaded) setProjectPanelHeight();
     });
 
     $scope.toggleSidebar = function() {
@@ -40,7 +33,7 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
         $cookieStore.put('toggle', $scope.toggle);
 
         $timeout(function() {
-            if ($scope.DOMContentLoaded) setProjectPanelHeight();
+            if($scope.DOMContentLoaded) setProjectPanelHeight();
         }, 400)
     };
 
@@ -49,39 +42,47 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
     };
 
     $scope.gotoAnchor = function(x) {
-        if ($state.current.name !== 'home') {
-            $state.go('home', {
-                target: x
-            });
-        }
-        //   var newHash = 'anchor' + x;
-        if ($location.hash() !== x) {
-            // set the $location.hash to `newHash` and
-            // $anchorScroll will automatically scroll to it
-            $location.hash(x);
-        } else {
-            // call $anchorScroll() explicitly,
-            // since $location.hash hasn't changed
-            $anchorScroll();
-        }
+    //   var newHash = 'anchor' + x;
+      if ($location.hash() !== x) {
+        // set the $location.hash to `newHash` and
+        // $anchorScroll will automatically scroll to it
+        $location.hash(x);
+      } else {
+        // call $anchorScroll() explicitly,
+        // since $location.hash hasn't changed
+        $anchorScroll();
+      }
     };
+
+
+    $scope.skillsTooltip = false;
+    $scope.showToolTip = function(str) {
+      console.log(str);
+      $scope.skillsTooltip = true;
+      console.log($scope.skillsTooltip);
+    }
+
+    angular.element(document).ready(function () {
+        $scope.DOMContentLoaded = true;
+        setProjectPanelHeight();
+    });
 
     $scope.email = "moc.kooltuo@trebron.scuzs".split('').reverse('').join('');
 
     $scope.sendEmail = function() {
-        function sendMail(emailId, subject, message) {
-            $window.open("mailto:" + emailId + "?subject=" + subject + "&body=" + message, "_self");
+        function sendMail(emailId,subject,message) {
+            $window.open("mailto:"+ emailId + "?subject=" + subject+"&body="+message,"_self");
         }
 
-        sendMail($scope.email, "", "");
+        sendMail($scope.email,"","");
     }
 
 
     function setProjectPanelHeight() {
-        if (document.getElementById("firstPanel") === null) return;
+        if(document.getElementById("firstPanel") === null) return;
         var heighT = document.getElementById("firstPanel").offsetHeight;
         var width = $scope.getWidth();
-        if (width > 992) {
+        if(width > 992){
             document.getElementById('secondPanel').style.height = heighT + 'px';
             document.getElementById('thirdPanel').style.height = heighT + 'px';
             document.getElementById('fourthPanel').style.height = heighT + 'px';

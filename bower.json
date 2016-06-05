@@ -22,6 +22,10 @@
     "font-awesome": "^4.6.3",
     "angular-cookies": "^1.5.6",
     "ngAnimate": "*",
-    "font-awesome-animation": "^0.0.9"
+    "font-awesome-animation": "^0.0.9",
+    "ngGallery": "*"
+  },
+  "resolutions": {
+    "angular": "^1.5.5"
   }
 }

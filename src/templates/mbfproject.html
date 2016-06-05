@@ -1,0 +1,61 @@
+<div class="row header">
+    <div class="col-xs-12" style="margin-top:30px; margin-left:10px">
+        <div class="meta">
+            <div class="menuLabel projectName">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button class="btn btn-sm btn-success goBack" ng-click="goBack()">
+                            <i class="fa fa-angle-double-left faa-passing-reverse animated" style="color:#38C577; margin-right:5px" aria-hidden="true"></i>
+                            Go back to all projects
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row text-center" style="position: relative; left: -10px; top: -20px">
+    <div class="col-xs-12 col-md-12">
+        <div class="panel panel-default panel-transparent project-panel">
+            <div class="panel-body skill-panel-body">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="row text-left">
+                            <span style="font-size:120%; line-height:30px; vertical-align:middle;">MBF Konferecia - {{ project.shortDesc }}</span>
+                            <i class="fa fa-mobile" aria-hidden="true" style="font-size:200%; line-height:30px; vertical-align:middle; margin-left:10px"></i>
+                        </div>
+                        <div class="row text-left">
+                            <p class="projectFullDesc" style="margin-top:30px;"><span class="greenText">Description:</span> {{ project.longDesc }}</p>
+                        </div>
+                        <div class="row" style="margin-top:10px">
+                            <div class="col-xs-12 text-left">
+                                <span style="margin-right:10px; margin-left:-15px; color:#38C577" class="projectFullDesc">Tags:</span>
+                                <span class="label projectTech">Ionic</span>
+                                <span class="label projectTech">AngularJS</span>
+                                <span class="label projectTech">Sass</span>
+                                <span class="label projectTech">PHP</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 text-left noMar noPad">
+                                    <a href="https://itunes.apple.com/us/app/mbf-konferencia/id1088589340?mt=8"><img ng-src="./img/appstoreicon.png" alt="" class="img-responsive projectImg img-rounded pull-left socialIcon"></a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.ionicframework.mbfkonferencia"><img ng-src="./img/playicon.png" alt="" class="img-responsive projectImg img-rounded pull-left socialIcon"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 noMar noPad">
+                        <div class="row noMar noPad">
+                            <div class="col-xs-12 text-right noMar noPad">
+                                <div class="row noMar noPad">
+                                    <img ng-src="{{ project.imgs[1] }}" alt="" class="img-responsive projectImg img-rounded pull-right projectPageImg">
+                                    <img ng-src="{{ project.imgs[0] }}" alt="" class="img-responsive projectImg img-rounded pull-right projectPageImg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
