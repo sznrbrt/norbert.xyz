@@ -81,6 +81,11 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
         sendMail($scope.email, "", "");
     }
 
+    $scope.downloadResume = function() {
+      console.log('download');
+      window.open('files/resume-norbert.pdf');
+    }
+
 
     function setProjectPanelHeight() {
         if (document.getElementById("firstPanel") === null) return;

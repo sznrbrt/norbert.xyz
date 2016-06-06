@@ -5,6 +5,24 @@ var app = angular.module('portfolioApp');
 app.controller('homeCtrl', function($scope, $state, $window, $stateParams, $location) {
   console.log('homeCtrl');
 
+  $scope.gotoAnchor = function(x) {
+      if ($state.current.name !== 'home') {
+          $state.go('home', {
+              target: x
+          });
+      }
+      //   var newHash = 'anchor' + x;
+      if ($location.hash() !== x) {
+          // set the $location.hash to `newHash` and
+          // $anchorScroll will automatically scroll to it
+          $location.hash(x);
+      } else {
+          // call $anchorScroll() explicitly,
+          // since $location.hash hasn't changed
+          $anchorScroll();
+      }
+  };
+
   $scope.gotogithub = function () {
     $window.location.href = 'https://github.com/sznrbrt';
   }
@@ -18,6 +36,11 @@ app.controller('homeCtrl', function($scope, $state, $window, $stateParams, $loca
     $location.hash($stateParams.target);
     setProjectPanelHeight();
     setBgVideoHeight();
+  }
+
+  $scope.downloadResume = function() {
+    console.log('download');
+    window.open('files/resume-norbert.pdf');
   }
 
   function setProjectPanelHeight() {
