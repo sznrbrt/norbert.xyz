@@ -19,12 +19,12 @@
 <div class="row hidden-md hidden-lg">
     <div class="col-xs-12 col-md-12 text-left mobileFullWidth" style="margin-left:-20px">
         <div class="panel panel-default panel-transparent">
-            <div class="panel-body" style="margin-top:20px; margin-bottom:0;">
+            <div class="panel-body" style="margin-top:20px; margin-bottom:0;" id="firstPanelOnMobile">
                 <h1 style="margin:0;  margin-left:-20px">Norbert Szucs</h1>
                 <h3 class="titleText"><span class="greenText">Full-stack JavaScript developer.</span></h3>
 
                 <div class="panel panel-default contactPanel noPad" style="padding:0; min-height:0">
-                    <div class="panel-body" style="padding:0;">
+                    <div class="panel-body" style="padding:0">
                         <div class="row noPad noMar text-center">
                             <div class="col-xs-12 col-md-8 noPad noMar">
                                 <div class="row noMar">
@@ -53,16 +53,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-md-4 noMar noPad text-right hidden-xs hidden-sm">
-                                <button class="btn btn-md openProjectDetails openCV">
-                                    <div class="row noMar noPad">
-                                        <i class="fa fa-arrow-circle-o-down  faa-vertical animated" aria-hidden="true" style="font-size:160%"></i>
-                                    </div>
-                                    <div class="row noMar noPad">
-                                        Download Norbert's
-                                    </div>
-                                </button>
-                            </div>
+
                             <div class="col-xs-12 col-md-4 noMar noPad text-center hidden-md hidden-lg">
                                 <button class="btn btn-sm" ng-click="downloadResume()" style="margin-bottom:10px; background-color:#38C577;">
                                     <div class="row noMar noPad">
@@ -379,45 +370,6 @@
             </div>
         </div>
     </div>
-
-    <!-- <div class="col-xs-12">
-        <div class="panel panel-default panel-transparent">
-            <div class="panel-heading">
-                <h3 class="panel-title">Other</h3>
-            </div>
-            <div class="panel-body" style>
-                <div class="row">
-                    <div class="col-xs-12 col-md-4 noMarPad">
-                        <div class="row">
-                            <div class="col-xs-4  col-xs-offset-0 text-left">
-                                <img src="img/gulplogo.png" alt="" class="logoImage alignedGulp">
-                            </div>
-                            <div class="col-xs-8 col-md-2 text-right">
-                                <p class="techName">Gulp</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-4 noMarPad text-left">
-                        <div class="col-xs-4 text-left">
-                            <img src="img/mochachailogo.png" alt="" class="img-responsive logoImage">
-                        </div>
-                        <div class="col-xs-8 col-md-5 text-right">
-                            <p class="techName">Mocha & Chai</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-4 col-md-offset-4 noMarPad text-left">
-                        <div class="col-xs-4 text-left">
-                            <img src="img/karmalogo.png" alt="" class="img-responsive logoImage">
-                        </div>
-                        <div class="col-xs-8 col-md-3 text-right">
-                            <p class="techName">Karma</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
     <!-- End Header Bar -->
     <!--  END OF SKILLS-->
 
@@ -555,42 +507,55 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="col-xs-12 col-md-8" style="opacity:0.6">
-            <div class="panel panel-default panel-transparent project-panel" id="secondPanel">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Soon...</h3>
-                </div>
-                <div class="panel-body skill-panel-body">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="row text-center">
-                                <i class="fa fa-github projectSub" aria-hidden="true"></i>
-                            </div>
-                            <div class="row text-center">
-                                Soon more projects will be uploaded... In the meantime, check my github.
-                            </div>
-                            <div class="row" style="margin-top:20px">
-                                <button class="btn btn-sm githubBtn" ng-click="gotogithub()">Go to github</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    </div>
+</div>
 
+<div class="row">
+    <div class="col-xs-12 mobilePositionHr" style="margin-left:-30px;">
+        <hr>
+    </div>
+</div>
+<div class="pullRightFrame">
+    <div id="projects"></div>
+    <div class="row header text-left">
+        <div class="col-xs-12">
+            <div class="meta">
+                <div class="menuLabel" style="margin-left:-30px">
+                    Blog
+                </div>
             </div>
         </div>
-        <div class="col-xs-12 col-md-8">
-            <div class="panel panel-default panel-transparent project-panel" id="thirdPanel">
-                <div class="panel-body skill-panel-body">
-                    <div class="row" id="goToTxt" style="vertical-align:middle">
-                        <a id="goToAllLink"><h1 style="color:white" id="goToH1">
-                        Go to all projects
-                        <i class="fa fa-laptop" aria-hidden="true"></i>
-                        <i class="fa fa-mobile" aria-hidden="true"></i>
-                        <i class="fa fa-angle-double-right faa-passing animated" aria-hidden="true"></i></h1>
-                    </a>
-                    </div>
-                </div>
-
+    </div>
+</div>
+<!--
+<div class="row noMar noPad">
+    <div class="col-xs-12 noMar noPad">
+             <div class="panel panel-default panel-transparent">
+                 <div class="panel-body skill-panel-body">
+                     <div class="row" id="goToTxt" style="vertical-align:middle">
+                         <a id="goToAllLink"><h1 style="color:white" id="goToH1">
+                         Go to all projects
+                         <i class="fa fa-laptop" aria-hidden="true"></i>
+                         <i class="fa fa-mobile" aria-hidden="true"></i>
+                         <i class="fa fa-angle-double-right faa-passing animated" aria-hidden="true"></i></h1>
+                     </a>
+                     </div>
+                 </div>
             </div>
-        </div> -->
-        <!-- </div> -->
+    </div>
+</div> -->
+
+
+
+<div class="row">
+    <div class="col-xs-12 col-md-12 text-center mobileFullWidth" style="margin-left:-30px">
+        <div class="panel panel-default panel-transparent" style="background-color:transparent">
+            <div class="panel-body" style="padding: 10px 10px">
+                <a id="goToAllLink" href="https://medium.com/@sznrbrt" target="_blank"><h1 style="color:white" id="goToH1">
+                    Go to my blog
+                    <i class="fa fa-angle-double-right faa-passing animated" aria-hidden="true"></i></h1>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
