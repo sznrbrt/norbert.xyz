@@ -4,12 +4,17 @@ var app = angular.module('portfolioApp');
 
 app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll, $location, $timeout, $window, $stateParams) {
     console.log('mainCtrl');
+    $scope.loading = true;
     $scope.hoverStyle = {};
     $scope.DOMContentLoaded = false;
     /**
      * Sidebar Toggle & Cookie Control
      */
     var mobileView = 992;
+
+    $timeout(()=> {
+        $scope.loading = false;
+    }, 3000);
 
     $scope.getWidth = function() {
         return window.innerWidth;

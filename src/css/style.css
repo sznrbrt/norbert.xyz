@@ -495,3 +495,11 @@ video#bgvid {
 .foldButton:hover {
   background-color: #38C577;
 }
+
+.progress-bar-success {
+  background-color: #38C577;
+}
+
+.progress {
+  border-radius: 0px;
+}
