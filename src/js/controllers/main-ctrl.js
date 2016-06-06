@@ -14,10 +14,14 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
     $scope.getWidth = function() {
         return window.innerWidth;
     };
+    $scope.getHeight = function() {
+        return window.innerHeight;
+    };
 
     angular.element(document).ready(function() {
         $scope.DOMContentLoaded = true;
         setProjectPanelHeight();
+        setBgVideoHeight()
     });
 
     $scope.$watch($scope.getWidth, function(newValue, oldValue) {
@@ -32,6 +36,7 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
         }
         if ($scope.DOMContentLoaded) {
             setProjectPanelHeight();
+            setBgVideoHeight();
         }
     });
 
@@ -89,5 +94,11 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
         } else {
             document.getElementById('thirdPanel').style.height = 'auto';
         }
+    }
+
+    function setBgVideoHeight() {
+        var height = $scope.getHeight();
+        document.getElementById('videoBg').style.height = (height) + 'px';
+        document.getElementById('videoText').style.top = ((height / 2) * (-1) - 100)  + 'px';
     }
 });

@@ -17,6 +17,7 @@ app.controller('homeCtrl', function($scope, $state, $window, $stateParams, $loca
     console.log($location);
     $location.hash($stateParams.target);
     setProjectPanelHeight();
+    setBgVideoHeight();
   }
 
   function setProjectPanelHeight() {
@@ -31,6 +32,12 @@ app.controller('homeCtrl', function($scope, $state, $window, $stateParams, $loca
       } else {
           document.getElementById('thirdPanel').style.height = 'auto';
       }
+  }
+
+  function setBgVideoHeight() {
+      var height = $scope.getHeight();
+      document.getElementById('videoBg').style.height = (height) + 'px';
+      document.getElementById('videoText').style.top = ((height / 2) * (-1) - 100)  + 'px';
   }
 
   $scope.reversedEmail = "moc.kooltuo@trebron.scuzs";
