@@ -75,8 +75,10 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
         $scope.$apply();
     };
 
-    $scope.gotoAnchor = function(x) {
+    $scope.gotoAnchor = function(x, bool) {
         if ($state.current.name !== 'home') {
+            var height = $scope.getWidth();
+            if(bool && height < 422) $scope.toggleSidebar();
             $state.go('home', {
                 target: x
             });
@@ -86,10 +88,12 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
             // set the $location.hash to `newHash` and
             // $anchorScroll will automatically scroll to it
             $location.hash(x);
+            if(bool && height < 422) $scope.toggleSidebar();
         } else {
             // call $anchorScroll() explicitly,
             // since $location.hash hasn't changed
             $anchorScroll();
+            if(bool && height < 422) $scope.toggleSidebar();
         }
     };
 
