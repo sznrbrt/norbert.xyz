@@ -80,6 +80,7 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
     $scope.gotoAnchor = function(x, bool) {
         var height = $scope.getWidth();
         if ($state.current.name !== 'home') {
+            console.log(bool, height);
             if(bool && height < 422) $scope.toggleSidebar();
             $state.go('home', {
                 target: x
@@ -87,6 +88,7 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
         }
         //   var newHash = 'anchor' + x;
         if ($location.hash() !== x) {
+            console.log(bool, height);
             // set the $location.hash to `newHash` and
             // $anchorScroll will automatically scroll to it
             $location.hash(x);
@@ -118,7 +120,7 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
             document.getElementById("menuButton").className = "fa fa-angle-double-left faa-passing-reverse animated menu-icon";
         }
         if ($scope.DOMContentLoaded && !$cookieStore.get('toggle')) {
-            document.getElementById("menuButton").className = "fa fa-angle-double-right faa-passing animated menu-icon";
+            document.getElementById("menuButton").className = "fa fa-angle-double-right faa-horizontal animated menu-icon";
         }
         else {
             document.getElementById("menuButton").className = "menu-icon fa fa-times greenText";
