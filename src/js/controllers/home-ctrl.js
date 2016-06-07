@@ -2,7 +2,7 @@
 
 var app = angular.module('portfolioApp');
 
-app.controller('homeCtrl', function($scope, $state, $window, $stateParams, $location) {
+app.controller('homeCtrl', function($scope, $state, $window, $stateParams, $location, $anchorScroll) {
   console.log('homeCtrl');
 
   $scope.gotoAnchor = function(x) {
@@ -41,6 +41,21 @@ app.controller('homeCtrl', function($scope, $state, $window, $stateParams, $loca
   $scope.downloadResume = function() {
     console.log('download');
     window.open('files/resume-norbert.pdf');
+  }
+
+  $scope.goToSocial = function(trgt) {
+    if(trgt === 'github') {
+      window.open('//www.github.com/sznrbrt');
+    }
+    if(trgt === 'linkedin') {
+      window.open('//www.linkedin.com/in/sznrbrt');
+    }
+    if(trgt === 'twitter') {
+      window.open('//www.twitter.com/sznrbrt');
+    }
+    if(trgt === 'stackoverflow') {
+      window.open('//www.stackoverflow.com/users/5937567/sznrbrt');
+    }
   }
 
   function setProjectPanelHeight() {

@@ -4,6 +4,7 @@ var app = angular.module('portfolioApp');
 
 app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll, $location, $timeout, $window, $stateParams) {
     console.log('mainCtrl');
+
     $scope.loading = true;
     $scope.hoverStyle = {};
     $scope.DOMContentLoaded = false;
@@ -11,10 +12,6 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
      * Sidebar Toggle & Cookie Control
      */
     var mobileView = 992;
-
-    $timeout(()=> {
-        $scope.loading = false;
-    }, 3000);
 
     $scope.getWidth = function() {
         return window.innerWidth;
@@ -24,9 +21,16 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
     };
 
     angular.element(document).ready(function() {
+        console.log('test');
         $scope.DOMContentLoaded = true;
         setProjectPanelHeight();
-        setBgVideoHeight()
+        setBgVideoHeight();
+        menuIndicatiorToggle();
+        $timeout(()=> {
+            $scope.loading = false;
+            document.getElementById('sidebar-wrapper').style.opacity = '1';
+            document.getElementById('content-wrapper').style.opacity = '1';
+        }, 3000);
     });
 
     $scope.$watch($scope.getWidth, function(newValue, oldValue) {
@@ -41,16 +45,18 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
         }
         if ($scope.DOMContentLoaded) {
             setProjectPanelHeight();
-            setBgVideoHeight();
+            if(newValue > 992)
+                setBgVideoHeight();
         }
+        menuIndicatiorToggle();
     });
 
     $scope.toggleSidebar = function() {
         $scope.toggle = !$scope.toggle;
         $cookieStore.put('toggle', $scope.toggle);
-
+        menuIndicatiorToggle();
         $timeout(function() {
-            if ($scope.DOMContentLoaded) setProjectPanelHeight();
+            if ($scope.DOMContentLoaded) setProjectPanelHeight;
         }, 400)
     };
 
@@ -87,10 +93,20 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
     }
 
     $scope.downloadResume = function() {
-      console.log('download');
       window.open('files/resume-norbert.pdf');
-    }
+    };
 
+    function menuIndicatiorToggle() {
+        if ($scope.DOMContentLoaded && $cookieStore.get('toggle')) {
+            document.getElementById("menuButton").className = "fa fa-angle-double-left faa-passing-reverse animated menu-icon";
+        }
+        if ($scope.DOMContentLoaded && !$cookieStore.get('toggle')) {
+            document.getElementById("menuButton").className = "fa fa-angle-double-right faa-passing animated menu-icon";
+        }
+        else {
+            document.getElementById("menuButton").className = "menu-icon fa fa-times greenText";
+        }
+    };
 
     function setProjectPanelHeight() {
         if (document.getElementById("firstPanel") === null) return;

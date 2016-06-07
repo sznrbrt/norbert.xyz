@@ -509,3 +509,17 @@ video#bgvid {
 .progress {
   border-radius: 0px;
 }
+ .white {
+   color:white;
+ }
+
+#menuButton {
+  font-size: 1.2em;
+}
+
+@media screen and (min-width: 920px) {
+  #loading {
+    position:relative;
+    left: -100px;
+  }
+}

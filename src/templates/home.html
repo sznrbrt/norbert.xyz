@@ -70,7 +70,7 @@
 </div>
 
 <!-- Header Bar -->
-<div class="row header hidden-xs hidden-sm">
+<div class="row header hidden-xs hidden-sm menuAnimBox">
     <div class="col-xs-12" style="margin-top:30px; margin-left:10px">
         <div class="meta">
             <div class="menuLabel">
@@ -80,7 +80,7 @@
     </div>
 </div>
 
-<div class="row hidden-xs hidden-sm">
+<div class="row hidden-xs hidden-sm menuAnimBox">
     <div class="col-xs-12 text-center" style="margin-left:-20px;">
         <div class="panel panel-default panel-transparent" style="padding: 50px 5px;">
             <div class="panel-body">
@@ -107,21 +107,21 @@
                                         <i class="fa fa-envelope contactIcon" aria-hidden="true"></i><span class="email">{{ reversedEmail | reverse }}</span>
                                     </div>
                                     <div class="col-xs-12 col-md-offset-1 col-md-3 noMar noPad">
-                                        <button class="btn btn-sm contactBtn">
+                                        <button class="btn btn-sm contactBtn" ng-click="goToSocial('github')">
                                             <i class="fa fa-github contactIcon" aria-hidden="true"></i> Github
                                         </button>
                                     </div>
-                                    <div class="col-xs-12 col-md-3 noMar noPad">
+                                    <div class="col-xs-12 col-md-3 noMar noPad" ng-click="goToSocial('stackoverflow')">
                                         <button class="btn btn-sm contactBtn">
                                             <i class="fa fa-stack-overflow contactIcon" aria-hidden="true"></i> Stackoverflow
                                         </button>
                                     </div>
-                                    <div class="col-xs-12 col-md-3 noMar noPad">
+                                    <div class="col-xs-12 col-md-3 noMar noPad" ng-click="goToSocial('linkedin')">
                                         <button class="btn btn-sm contactBtn">
                                             <i class="fa fa-linkedin contactIcon" aria-hidden="true"></i> LinkedIn
                                         </button>
                                     </div>
-                                    <div class="col-xs-12 col-md-3 noMar noPad">
+                                    <div class="col-xs-12 col-md-3 noMar noPad" ng-click="goToSocial('twitter')">
                                         <button class="btn btn-sm contactBtn">
                                             <i class="fa fa-twitter contactIcon" aria-hidden="true"></i> Twitter
                                         </button>

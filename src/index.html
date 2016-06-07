@@ -14,6 +14,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/bower_components/font-awesome-animation/dist/font-awesome-animation.min.css">
     <link rel="stylesheet" type="text/css" href="/bower_components/ngGallery/css/style.css">
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.min.css">
 
     <!--  CUSTOM STYLE -->
     <link rel="stylesheet" href="css/style.css">
@@ -39,20 +40,25 @@
 <body ng-app="portfolioApp" ng-controller="mainCtrl">
     <div>
         <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
+            <!-- <div class="col-xs-12">
+                <div class="row text-center" id="loading">
+                    Loading...
+                </div>
+            </div> -->
             <!-- Sidebar -->
-            <div id="sidebar-wrapper">
+            <div id="sidebar-wrapper" style="opacity:0.0">
                 <ul class="sidebar">
                     <li class="sidebar-main">
                         <a ng-click="toggleSidebar()">
-                            <span class="">Navigation</span>
-                            <i class="menu-icon fa fa-bars" aria-hidden="true"></i>
+                            <span class=""></span>
+                            <i class="menu-icon fa fa-bars" aria-hidden="true" id="menuButton"></i>
                         </a>
                     </li>
                     <li class="sidebar-list">
                         <a href="" ng-click="gotoAnchor('aboutme')">About me<i class="menu-icon fa fa-user" aria-hidden="true"></i></a>
                     </li>
                     <li class="sidebar-list">
-                        <a ng-click="gotoAnchor('skills')">My skills<i class="menu-icon fa fa-terminal" aria-hidden="true"></i></a>
+                        <a href="" ng-click="gotoAnchor('skills')">My skills<i class="menu-icon fa fa-terminal" aria-hidden="true"></i></a>
                     </li>
                     <li class="sidebar-list">
                         <a href="" ng-click="gotoAnchor('projects')">Projects<i class="menu-icon fa fa-diamond" aria-hidden="true"></i></a>
@@ -81,7 +87,7 @@
             </div>
             <!-- End Sidebar -->
 
-            <div id="content-wrapper">
+            <div id="content-wrapper" style="opacity:0.0">
                 <div class="page-content">
 
                     <!-- Main Content -->

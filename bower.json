@@ -23,7 +23,8 @@
     "angular-cookies": "^1.5.6",
     "ngAnimate": "*",
     "font-awesome-animation": "^0.0.9",
-    "ngGallery": "*"
+    "ngGallery": "*",
+    "animate.css": "^3.5.2"
   },
   "resolutions": {
     "angular": "^1.5.5"
