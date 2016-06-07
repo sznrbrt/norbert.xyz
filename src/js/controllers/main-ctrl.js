@@ -21,7 +21,6 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
     };
 
     angular.element(document).ready(function() {
-        console.log('test');
         $scope.DOMContentLoaded = true;
         var height = $scope.getHeight();
         var width = $scope.getWidth();
@@ -35,13 +34,16 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
         document.getElementById('loaderBox').style.top = (height / 2) + 'px';
         document.getElementById('loaderBox').style.display = 'inline';
         setProjectPanelHeight();
-        setBgVideoHeight();
         menuIndicatiorToggle();
+        var chrome = /chrome/i;
+        if(chrome.test($window.navigator.userAgent));
+            console.log(true);
         $timeout(()=> {
+            setBgVideoHeight();
             $scope.loading = false;
             document.getElementById('sidebar-wrapper').style.opacity = '1';
             document.getElementById('content-wrapper').style.opacity = '1';
-        }, 3000);
+        }, 2000);
     });
 
     $scope.$watch($scope.getWidth, function(newValue, oldValue) {
@@ -138,6 +140,8 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
     }
 
     function setBgVideoHeight() {
+        if(!document.getElementById('videoBg')) return;
+        if(!document.getElementById('videoText')) return;
         var height = $scope.getHeight();
         document.getElementById('videoBg').style.height = (height) + 'px';
         document.getElementById('videoText').style.top = ((height / 2) * (-1) - 100)  + 'px';
