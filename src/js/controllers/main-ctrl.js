@@ -76,8 +76,8 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
     };
 
     $scope.gotoAnchor = function(x, bool) {
+        var height = $scope.getWidth();
         if ($state.current.name !== 'home') {
-            var height = $scope.getWidth();
             if(bool && height < 422) $scope.toggleSidebar();
             $state.go('home', {
                 target: x
