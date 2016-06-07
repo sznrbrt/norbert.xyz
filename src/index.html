@@ -40,11 +40,17 @@
 <body ng-app="portfolioApp" ng-controller="mainCtrl">
     <div>
         <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
-            <!-- <div class="col-xs-12">
-                <div class="row text-center" id="loading">
-                    Loading...
+            <div class="row text-center">
+                <div class="col-xs-12 noMar noPad" style="position:relative; left:-140px" ng-if="loading" id="loaderBox">
+                    <div id="loader">
+                        <div id="box"></div>
+                        <div id="hill"></div>
+                        <div style="position:relative; top:100px; left: 10px">
+                            Loading...
+                        </div>
+                    </div>
                 </div>
-            </div> -->
+            </div>
             <!-- Sidebar -->
             <div id="sidebar-wrapper" style="opacity:0.0">
                 <ul class="sidebar">

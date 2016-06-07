@@ -23,6 +23,8 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
     angular.element(document).ready(function() {
         console.log('test');
         $scope.DOMContentLoaded = true;
+        var height = $scope.getHeight();
+        document.getElementById('loaderBox').style.top = (height / 2) + 'px';
         setProjectPanelHeight();
         setBgVideoHeight();
         menuIndicatiorToggle();
