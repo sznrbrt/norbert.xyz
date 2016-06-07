@@ -453,6 +453,9 @@ body {
   .socialIcon {
     max-height: 0 !important;
   }
+  #goToH1:hover {
+    font-size: 1em;
+  }
 }
 
 #videoText {
