@@ -24,7 +24,16 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
         console.log('test');
         $scope.DOMContentLoaded = true;
         var height = $scope.getHeight();
+        var width = $scope.getWidth();
+        if(width > 992) {
+            document.getElementById('loaderBox').style.left = width / 2 - 850 + 'px';
+        } else if (width > 422) {
+            document.getElementById('loaderBox').style.left = width / 2 - 360 + 'px';
+        } else {
+            document.getElementById('loaderBox').style.left = '-35px'
+        }
         document.getElementById('loaderBox').style.top = (height / 2) + 'px';
+        document.getElementById('loaderBox').style.display = 'inline';
         setProjectPanelHeight();
         setBgVideoHeight();
         menuIndicatiorToggle();
