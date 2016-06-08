@@ -58,6 +58,18 @@ app.controller('homeCtrl', function($scope, $state, $window, $stateParams, $loca
     }
   }
 
+  $scope.animateElementIn = function($el) {
+      console.log($el, 'el');
+      $el.removeClass('hidden');
+      $el.addClass('animated fadeInUp'); // this example leverages animate.css classes
+  };
+
+  $scope.animateElementOut = function($el) {
+      console.log($el, '$el');
+      $el.addClass('hidden');
+      $el.removeClass('animated fadeInUp'); // this example leverages animate.css classes
+  };
+
   function setProjectPanelHeight() {
       if(document.getElementById("firstPanel") === null) return;
       var heighT = document.getElementById("firstPanel").offsetHeight;

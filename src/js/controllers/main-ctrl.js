@@ -109,9 +109,6 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
     };
 
     function menuIndicatorToggle() {
-        if ($scope.DOMContentLoaded && $cookieStore.get('toggle')) {
-            document.getElementById("menuButton").className = "fa fa-angle-double-left faa-passing-reverse animated menu-icon";
-        }
         if ($scope.DOMContentLoaded && !$cookieStore.get('toggle')) {
             document.getElementById("menuButton").className = "fa fa-angle-double-right faa-horizontal animated menu-icon";
         }

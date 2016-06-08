@@ -1,3 +1,3 @@
 'use strict';
 
-var app = angular.module('portfolioApp', ['ui.router', 'ui.bootstrap', 'ngCookies', 'jkuri.gallery']);
+var app = angular.module('portfolioApp', ['ui.router', 'ui.bootstrap', 'ngCookies', 'jkuri.gallery', 'angular-scroll-animate']);

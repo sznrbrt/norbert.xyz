@@ -719,3 +719,7 @@ video#bgvid {
         transform: translate(0, -1em) rotate(-225deg);
     }
 }
+
+.hidden {
+  visibility: hidden;
+}

@@ -24,7 +24,8 @@
     "ngAnimate": "*",
     "font-awesome-animation": "^0.0.9",
     "ngGallery": "*",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "angular-scroll-animate": "^0.9.8"
   },
   "resolutions": {
     "angular": "^1.5.5"
