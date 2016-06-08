@@ -24,17 +24,10 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
         $scope.DOMContentLoaded = true;
         var height = $scope.getHeight();
         var width = $scope.getWidth();
-        if(width > 992) {
-            document.getElementById('loaderBox').style.left = width / 2 - 850 + 'px';
-        } else if (width > 422) {
-            document.getElementById('loaderBox').style.left = width / 2 - 360 + 'px';
-        } else {
-            document.getElementById('loaderBox').style.left = '-35px'
-        }
-        document.getElementById('loaderBox').style.top = (height / 2) + 'px';
         document.getElementById('loaderBox').style.display = 'inline';
+
         setProjectPanelHeight();
-        menuIndicatiorToggle();
+        menuIndicatorToggle();
         var chrome = /chrome/i;
         if(chrome.test($window.navigator.userAgent));
             console.log(true);
@@ -61,13 +54,13 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
             if(newValue > 992)
                 setBgVideoHeight();
         }
-        menuIndicatiorToggle();
+        menuIndicatorToggle();
     });
 
     $scope.toggleSidebar = function() {
         $scope.toggle = !$scope.toggle;
         $cookieStore.put('toggle', $scope.toggle);
-        menuIndicatiorToggle();
+        menuIndicatorToggle();
         $timeout(function() {
             if ($scope.DOMContentLoaded) setProjectPanelHeight;
         }, 400)
@@ -115,7 +108,7 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
       window.open('files/resume-norbert.pdf');
     };
 
-    function menuIndicatiorToggle() {
+    function menuIndicatorToggle() {
         if ($scope.DOMContentLoaded && $cookieStore.get('toggle')) {
             document.getElementById("menuButton").className = "fa fa-angle-double-left faa-passing-reverse animated menu-icon";
         }

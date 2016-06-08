@@ -519,7 +519,7 @@ video#bgvid {
 
 @media screen and (min-width: 920px) {
   #loaderBox {
-    position:relative;
+    position:fixed;
     left: -120px;
     top:400px;
     display:none
@@ -527,7 +527,7 @@ video#bgvid {
 }
 
 #loader {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     margin-top: -2.7em;
