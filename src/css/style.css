@@ -497,6 +497,7 @@ video#bgvid {
   background-color: transparent;
   margin-right: 20px;
   border-radius: 0px;
+  margin-top: -20px;
 }
 .foldButton:hover {
   background-color: #38C577;
