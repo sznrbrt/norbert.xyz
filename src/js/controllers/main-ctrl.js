@@ -20,22 +20,26 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
         return window.innerHeight;
     };
 
+    disableScroll();
+
     angular.element(document).ready(function() {
         $scope.DOMContentLoaded = true;
         var height = $scope.getHeight();
         var width = $scope.getWidth();
         document.getElementById('loaderBox').style.display = 'inline';
-
+        $location.hash('top');
         setProjectPanelHeight();
         menuIndicatorToggle();
-        var chrome = /chrome/i;
-        if(chrome.test($window.navigator.userAgent));
-            console.log(true);
+        // var chrome = /chrome/i;
+        // if(chrome.test($window.navigator.userAgent));
+        //     console.log(true);
         $timeout(function () {
             setBgVideoHeight();
             $scope.loading = false;
             document.getElementById('sidebar-wrapper').style.opacity = '1';
             document.getElementById('content-wrapper').style.opacity = '1';
+            enableScroll();
+            $location.hash('');
         }, 2000);
     });
 
@@ -137,5 +141,41 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
         var height = $scope.getHeight();
         document.getElementById('videoBg').style.height = (height) + 'px';
         document.getElementById('videoText').style.top = ((height / 2) * (-1) - 100)  + 'px';
+    }
+
+    // left: 37, up: 38, right: 39, down: 40,
+    // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+    var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+    function preventDefault(e) {
+      e = e || window.event;
+      if (e.preventDefault)
+          e.preventDefault();
+      e.returnValue = false;
+    }
+
+    function preventDefaultForScrollKeys(e) {
+        if (keys[e.keyCode]) {
+            preventDefault(e);
+            return false;
+        }
+    }
+
+    function disableScroll() {
+      if (window.addEventListener) // older FF
+          window.addEventListener('DOMMouseScroll', preventDefault, false);
+      window.onwheel = preventDefault; // modern standard
+      window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+      window.ontouchmove  = preventDefault; // mobile
+      document.onkeydown  = preventDefaultForScrollKeys;
+    }
+
+    function enableScroll() {
+        if (window.removeEventListener)
+            window.removeEventListener('DOMMouseScroll', preventDefault, false);
+        window.onmousewheel = document.onmousewheel = null;
+        window.onwheel = null;
+        window.ontouchmove = null;
+        document.onkeydown = null;
     }
 });
