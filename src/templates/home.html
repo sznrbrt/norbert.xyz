@@ -55,6 +55,13 @@
                             </div>
 
                             <div class="col-xs-12 col-md-4 noMar noPad text-center hidden-md hidden-lg">
+                                <button class="btn btn-sm" ng-click="downloadResume()" style="margin-bottom:10px; background-color:#B72D2C;">
+                                    <div class="row noMar noPad">
+                                            <img src="./img/quoralogo.png" alt="" style="max-height:20px" class="img-responsive">
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="col-xs-12 col-md-4 noMar noPad text-center hidden-md hidden-lg">
                                 <button class="btn btn-sm" ng-click="downloadResume()" style="margin-bottom:10px; background-color:#38C577;">
                                     <div class="row noMar noPad">
                                         Download Norbert's Resume
@@ -85,9 +92,15 @@
         <div class="panel panel-default panel-transparent" style="padding: 50px 5px;">
             <div class="panel-body">
                 <h4 style="margin:0;  margin-left:-0px" class="">
-                    Hi, my name is Norbert Szucs and I've been using computers since I was 5 years old.
-                    I started my career in Finance, but computers remained my true passion.
-                    Code is my tool to build things and make my ideas become reality.
+                    Hi, my name is <span class="greenText">Norbert Szucs</span> and I've been using computers since I was 5 years old.
+                    <!-- I started my career in Finance, but computers remained my true passion.
+                    Code is my tool to build things and make my ideas become reality. -->
+                </h4>
+                <h4 style="margin:0;  margin-left:-0px; margin-top: 10px;" class="">
+                    I started my career in <span class="greenText">Finance</span>, but <span class="greenText">computers</span> remained my true <span class="greenText">passion</span>.
+                </h4>
+                <h4 style="margin:0;  margin-left:-0px; margin-top: 10px;" class="">
+                    <span class="greenText">Code</span> is my tool to <span class="greenText">build things</span> and make my <span class="greenText">ideas become reality.</span>
                 </h4>
             </div>
         </div>
@@ -101,12 +114,17 @@
                 <div class="panel panel-default contactPanel noPad" style="padding:0; min-height:0;">
                     <div class="panel-body" style="padding:0;">
                         <div class="row noPad noMar text-center">
-                            <div class="col-xs-12 col-md-8 noPad noMar">
+                            <div class="col-xs-12 col-md-1 noMar noPad text-left hidden-xs hidden-sm">
+                                <button class="btn btn-md openProjectDetails openCV quoraButton" ng-click="openQuora()">
+                                    <img src="./img/quoralogo.png" alt="" class="img-responsive" style="max-height:55px">
+                                </button>
+                            </div>
+                            <div class="col-xs-12 col-md-7 noPad noMar">
                                 <div class="row noMar">
                                     <div class="col-xs-12 col-md-12 noMar" style="padding: 5px 0;">
                                         <i class="fa fa-envelope contactIcon" aria-hidden="true"></i><span class="email">{{ reversedEmail | reverse }}</span>
                                     </div>
-                                    <div class="col-xs-12 col-md-offset-1 col-md-3 noMar noPad">
+                                    <div class="col-xs-12 col-md-3 noMar noPad">
                                         <button class="btn btn-sm contactBtn" ng-click="goToSocial('github')">
                                             <i class="fa fa-github contactIcon" aria-hidden="true"></i> Github
                                         </button>
@@ -134,7 +152,7 @@
                                         <i class="fa fa-arrow-circle-o-down  faa-vertical animated" aria-hidden="true" style="font-size:160%"></i>
                                     </div>
                                     <div class="row noMar noPad">
-                                        Download Norbert's Resume
+                                        Download Resume
                                     </div>
                                 </button>
                             </div>

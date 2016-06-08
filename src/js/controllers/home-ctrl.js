@@ -23,6 +23,10 @@ app.controller('homeCtrl', function($scope, $state, $window, $stateParams, $loca
       }
   };
 
+  $scope.openQuora = function() {
+    $window.open('//www.quora.com/profile/Norbert-Szucs');
+  }
+
   $scope.gotogithub = function () {
     $window.location.href = 'https://github.com/sznrbrt';
   }

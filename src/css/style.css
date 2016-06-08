@@ -737,3 +737,16 @@ video#bgvid {
     top: -50px;
   }
 }
+
+.quoraButton {
+  margin: 0 !important;
+  padding: 2px;
+  border-radius: 2px 0 0 2px;
+  background-color: #B72D2C;
+}
+.quoraButton:hover {
+  -moz-box-shadow:    inset 0 0 3px #000000;
+  -webkit-box-shadow: inset 0 0 3px #000000;
+  box-shadow:         inset 0 0 3px #000000;
+  background-color: #B72D2C;
+}
