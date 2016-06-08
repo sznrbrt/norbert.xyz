@@ -2,8 +2,16 @@
 
 var app = angular.module('portfolioApp');
 
-app.controller('homeCtrl', function($scope, $state, $window, $stateParams, $location, $anchorScroll) {
+app.controller('homeCtrl', function($scope, $state, $window, $stateParams, $location, $anchorScroll, $document) {
   console.log('homeCtrl');
+
+  $scope.aFunction = function() {
+    var duration = 2000;
+    var offset = 0;
+    var someElement = angular.element(document.getElementById('skills'));
+    console.log(someElement);
+    $document.scrollToElement(someElement, offset, duration);
+  }
 
   $scope.gotoAnchor = function(x) {
       if ($state.current.name !== 'home') {

@@ -535,7 +535,7 @@ video#bgvid {
     margin-left: -2.7em;
     width: 5.4em;
     height: 5.4em;
-    background-color: #404456;
+    background-color: #404352;
 }
 
 #hill {
@@ -558,7 +558,7 @@ video#bgvid {
     width: 7.1em;
     height: 7.1em;
     left: 0;
-    background-color: #404456;
+    background-color: #404352;
 }
 
 #box {
@@ -723,4 +723,11 @@ video#bgvid {
 
 .hidden {
   visibility: hidden;
+}
+
+@media screen and (max-height: 645px) {
+  #foldButtonGroup {
+    position: relative;
+    top: -65px;
+  }
 }
