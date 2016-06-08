@@ -731,3 +731,9 @@ video#bgvid {
     top: -105px;
   }
 }
+@media screen and (max-width: 922px) {
+  #projects {
+    position: relative;
+    top: -50px;
+  }
+}
