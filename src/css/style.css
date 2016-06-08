@@ -728,6 +728,6 @@ video#bgvid {
 @media screen and (max-height: 645px) {
   #foldButtonGroup {
     position: relative;
-    top: -65px;
+    top: -105px;
   }
 }
