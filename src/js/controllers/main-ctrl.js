@@ -31,7 +31,7 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
         var chrome = /chrome/i;
         if(chrome.test($window.navigator.userAgent));
             console.log(true);
-        $timeout(()=> {
+        $timeout(function () {
             setBgVideoHeight();
             $scope.loading = false;
             document.getElementById('sidebar-wrapper').style.opacity = '1';
