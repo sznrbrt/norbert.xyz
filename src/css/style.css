@@ -743,6 +743,7 @@ video#bgvid {
   padding: 2px;
   border-radius: 2px 0 0 2px;
   background-color: #B72D2C;
+  opacity: 0.8;
 }
 .quoraButton:hover {
   -moz-box-shadow:    inset 0 0 3px #000000;
