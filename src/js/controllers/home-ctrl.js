@@ -26,7 +26,7 @@ app.controller('homeCtrl', function($scope, $state, $window, $stateParams, $loca
   }
 
   $scope.gotogithub = function () {
-    $window.location.href = 'https://github.com/sznrbrt';
+    $window.open('//github.com/sznrbrt');
   }
 
   $scope.openProject = function (proj) {
