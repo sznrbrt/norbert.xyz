@@ -3,8 +3,6 @@
 var app = angular.module('portfolioApp');
 
 app.controller('homeCtrl', function($scope, $state, $window, $stateParams, $location, $anchorScroll, $document) {
-  console.log('homeCtrl');
-
   $scope.gotoAnchor = function(x) {
       if ($state.current.name !== 'home') {
           $state.go('home', {
@@ -36,14 +34,12 @@ app.controller('homeCtrl', function($scope, $state, $window, $stateParams, $loca
   }
 
   if($stateParams.target){
-    console.log($location);
     $location.hash($stateParams.target);
     setProjectPanelHeight();
     setBgVideoHeight();
   }
 
   $scope.downloadResume = function() {
-    console.log('download');
     window.open('files/resume-norbert.pdf');
   }
 
@@ -63,13 +59,11 @@ app.controller('homeCtrl', function($scope, $state, $window, $stateParams, $loca
   }
 
   $scope.animateElementIn = function($el) {
-      console.log($el, 'el');
       $el.removeClass('hidden');
       $el.addClass('animated fadeInUp'); // this example leverages animate.css classes
   };
 
   $scope.animateElementOut = function($el) {
-      console.log($el, '$el');
       $el.addClass('hidden');
       $el.removeClass('animated fadeInUp'); // this example leverages animate.css classes
   };

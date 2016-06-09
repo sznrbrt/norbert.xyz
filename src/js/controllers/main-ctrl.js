@@ -3,7 +3,6 @@
 var app = angular.module('portfolioApp');
 
 app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll, $location, $timeout, $window, $stateParams) {
-    console.log('mainCtrl');
 
     $scope.loading = true;
     $scope.hoverStyle = {};
@@ -77,7 +76,6 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
     $scope.gotoAnchor = function(x, bool) {
         var height = $scope.getWidth();
         if ($state.current.name !== 'home') {
-            console.log(bool, height);
             if(bool && height < 422) $scope.toggleSidebar();
             $state.go('home', {
                 target: x
@@ -85,7 +83,6 @@ app.controller('mainCtrl', function($scope, $state, $cookieStore, $anchorScroll,
         }
         //   var newHash = 'anchor' + x;
         if ($location.hash() !== x) {
-            console.log(bool, height);
             // set the $location.hash to `newHash` and
             // $anchorScroll will automatically scroll to it
             $location.hash(x);
