@@ -250,10 +250,6 @@ body {
   height: auto;
 }
 
-#goToH1:hover {
-  font-size: 3em;
-}
-
 #goToAllLink:hover {
   text-decoration: none;
   cursor: pointer;
@@ -278,7 +274,7 @@ body {
 }
 
 .skillsPanel {
-  min-height: 280px;
+  min-height: 330px;
 }
 
 .green {
